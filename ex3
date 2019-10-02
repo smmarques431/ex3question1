@@ -1,3 +1,13 @@
 julia> imread("el-capitan.png")
 elcapitan = imread("el-capitan.png")
 imshow(convert(Array{Float32,3}, elcapitan))
+
+function layers(image)
+    image = imread(image)
+    imshow(convert(Array{Float32,3}, image))
+    red = image[:,:,1]
+    green = image[:,:,2]
+    blue = image[:,:,3]
+
+    return red, green, blue
+end
