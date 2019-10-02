@@ -11,3 +11,15 @@ function layers(image)
 
     return red, green, blue
 end
+
+#BULLET C
+function layers(image)
+    image = imread(image)
+    println("Reset with git reset --mixed")
+    imshow(convert(Array{Float32,3}, image))
+    red = image[:,:,1]
+    green = image[:,:,2]
+    blue = image[:,:,3]
+
+    return red, green, blue
+end
