@@ -1,0 +1,3 @@
+julia> imread("el-capitan.png")
+elcapitan = imread("el-capitan.png")
+imshow(convert(Array{Float32,3}, elcapitan))
