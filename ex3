@@ -23,3 +23,19 @@ function layers(image)
 
     return red, green, blue
 end
+
+#BULLET E
+image2 = zeros(360, 640, 3)
+image2[:,:,1] = elcapitan[:,:,2]
+image2[:,:,2] = elcapitan[:,:,3]
+image2[:,:,3] = elcapitan[:,:,1]
+
+
+subplot(1,2,1)
+imshow(elcapitan)
+title("Original")
+axis("off")
+subplot(1,2,2);
+imshow(image2)
+title("Inverted Colors")
+axis("off")
