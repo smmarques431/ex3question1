@@ -30,7 +30,7 @@ image2[:,:,1] = elcapitan[:,:,2]
 image2[:,:,2] = elcapitan[:,:,3]
 image2[:,:,3] = elcapitan[:,:,1]
 
-
+figure(figsize = [5,5])
 subplot(1,2,1)
 imshow(elcapitan)
 title("Original")
@@ -38,4 +38,22 @@ axis("off")
 subplot(1,2,2);
 imshow(image2)
 title("Inverted Colors")
+axis("off")
+
+function rotation(image, pixels)
+    imshow(circshift(image, pixels))
+end
+
+
+imshow(circshift((elcapitan[:,:,1], 180))
+
+
+figure(figsize = [5,5])
+subplot(1,2,1)
+imshow(elcapitan)
+title("Original")
+axis("off")
+subplot(1,2,2);
+imshow(circshift(elcapitan[:,:,1], 180))
+title("Rotation")
 axis("off")
